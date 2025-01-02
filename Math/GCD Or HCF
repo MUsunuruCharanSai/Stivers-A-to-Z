@@ -1,0 +1,28 @@
+class Solution {
+    public static int[] lcmAndGcd(int a, int b) {
+        int gcd;
+        int lcm;
+        int arr []=new int[2];
+        int x=a;
+        int y=b;
+        while(a>0 && b>0){
+            if(a>b){
+                a=a%b;
+            }
+            else{
+                b=b%a;
+            }
+        }
+        if(a==0){
+            gcd = b;
+        }
+        else{
+            gcd=a;
+        }
+        int c=x*y;
+        lcm=Math.abs(c)/gcd;
+        arr[0]=lcm;
+        arr[1]=gcd;
+        return arr;
+        
+    }
