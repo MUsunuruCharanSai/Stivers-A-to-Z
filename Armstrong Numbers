@@ -1,0 +1,22 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        int n, sum = 0;
+        Scanner sc = new Scanner(System.in);
+        n = sc.nextInt();
+        int digits=String.valueOf(n).length();
+        int k = n; 
+        
+        while (n > 0) {
+            int digit = n % 10;
+            sum += Math.pow(digit,digits); 
+            n = n / 10; 
+        }
+        if (sum == k) {
+            System.out.print(true);
+        } else {
+            System.out.print(false);
+        }
+    }
+}
